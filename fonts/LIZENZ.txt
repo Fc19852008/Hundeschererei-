@@ -1,0 +1,13 @@
+Schriftarten dieser Website
+
+Bricolage Grotesque
+Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)
+
+Source Sans 3
+Copyright 2010-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+
+Beide Schriftarten stehen unter der SIL Open Font License, Version 1.1.
+Lizenztext: https://openfontlicense.org/open-font-license-official-text/
+
+Die Dateien stammen aus Google Fonts (Latin- und Latin-Extended-Teilmengen)
+und werden von diesem Server ausgeliefert, nicht von Google.
