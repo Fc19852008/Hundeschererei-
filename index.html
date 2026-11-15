@@ -25,7 +25,7 @@
     "addressCountry": "DE"
   },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "18:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
   ]
 }
@@ -249,31 +249,16 @@ section[id], footer[id] { scroll-margin-top: 16px; }
 /* ---------- Leistungen ---------- */
 .block { padding-block: 36px 34px; }
 @media (min-width: 900px) { .block { padding-block: 80px 0; } }
-#leistungen .lead { margin: 12px 0 20px; max-width: 680px; }
-.fell-filter {
-  display: flex; gap: 9px; overflow-x: auto; scrollbar-width: none;
-  margin-inline: calc(var(--rand) * -1); padding: 0 var(--rand) 6px;
-}
-.fell-filter::-webkit-scrollbar { display: none; }
-.chip {
-  flex-shrink: 0; min-height: 48px; padding: 0 18px; border-radius: 999px;
-  border: 2px solid var(--linie); background: #fff; color: var(--tinte);
-  font: 700 15px/1 var(--f-text); white-space: nowrap; cursor: pointer;
-}
-.chip[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); }
-@media (hover: hover) { .chip { transition: border-color .16s ease, background-color .16s ease; } .chip:hover { border-color: var(--marke); } .chip[aria-pressed="true"]:hover { border-color: var(--akzent); } }
+#leistungen .lead { margin: 12px 0 22px; max-width: 680px; }
 .leistungen {
-  list-style: none; margin: 14px 0 0; padding: 0; border-bottom: 1px solid var(--linie);
+  list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--linie);
   display: grid; grid-template-columns: minmax(0, 1fr);
 }
 .leistungen li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-top: 1px solid var(--linie); }
-.leistungen li[hidden] { display: none; }
 .leistungen .i { color: var(--marke); width: 24px; height: 24px; margin-top: 2px; }
 .leistungen h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 3px; }
 .leistungen p { font-size: 15px; line-height: 1.45; color: var(--text2); }
 @media (min-width: 900px) {
-  .fell-filter { flex-wrap: wrap; overflow: visible; margin: 0 0 26px; padding: 0; gap: 11px; }
-  .chip { font-size: 16px; padding: 0 20px; }
   .leistungen { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; margin-top: 0; }
   .leistungen li { gap: 18px; padding: 22px 0; }
   .leistungen .i { width: 28px; height: 28px; margin-top: 1px; }
@@ -475,7 +460,6 @@ section[id], footer[id] { scroll-margin-top: 16px; }
     <symbol id="i-pfeile" viewBox="0 0 24 24"><path d="M9 6 5 12l4 6M15 6l4 6-4 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .76-5.06V9.69a5.68 5.68 0 0 0-.76-.05 5.67 5.67 0 1 0 5.67 5.67V8.9a7.35 7.35 0 0 0 4.28 1.38V7.19a4.28 4.28 0 0 1-3.21-1.37Z" fill="currentColor"/></symbol>
     <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
-    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 9V7.2c0-.9.2-1.3 1.4-1.3H17V3h-2.6C11.3 3 10.2 4.5 10.2 7v2H8v3h2.2v9H14v-9h2.6l.4-3H14Z" fill="currentColor"/></symbol>
     <symbol id="i-person" viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4ZM4.5 21c0-4 3.4-6.4 7.5-6.4s7.5 2.4 7.5 6.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-uhr" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7.5V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-parken" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11ZM12 10h.01" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -488,7 +472,6 @@ section[id], footer[id] { scroll-margin-top: 16px; }
     <symbol id="l-kralle" viewBox="0 0 24 24"><path d="M12 13.8c2.7 0 4.9 1.8 4.9 3.9 0 1.5-1.3 2.6-2.9 2.6h-4c-1.6 0-2.9-1.1-2.9-2.6 0-2.1 2.2-3.9 4.9-3.9Z M6.4 8.6a2 2.4 0 1 0 .01 0Z M17.6 8.6a2 2.4 0 1 0 .01 0Z M9.8 5.4a1.9 2.4 0 1 0 .01 0Z M14.2 5.4a1.9 2.4 0 1 0 .01 0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="l-ohr" viewBox="0 0 24 24"><path d="M8.5 20c0-3-1.5-4-1.5-7a5 5 0 0 1 10 0c0 2-1 3-2.5 3S12 14 12 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="l-pfote" viewBox="0 0 24 24"><path d="M12 13.8c2.7 0 4.9 1.8 4.9 3.9 0 1.5-1.3 2.6-2.9 2.6h-4c-1.6 0-2.9-1.1-2.9-2.6 0-2.1 2.2-3.9 4.9-3.9Z M6.4 8.6a2 2.4 0 1 0 .01 0Z M17.6 8.6a2 2.4 0 1 0 .01 0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="l-zahn" viewBox="0 0 24 24"><path d="M12 3.5c-2 0-3-1-4.5-1S5 4 5 6.5c0 3 1.2 4.5 1.8 7.5.5 2.5.7 6 2.2 6s1.4-4 3-4 1.5 4 3 4 1.7-3.5 2.2-6c.6-3 1.8-4.5 1.8-7.5C19 3.5 18 2.5 16.5 2.5S14 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="l-zecke" viewBox="0 0 24 24"><path d="M12 8.5a4 4.5 0 1 0 .01 0ZM12 8.5V5.5M9 4l1.5 2M15 4l-1.5 2M8 10.5L5 9M8 13l-3 1M16 10.5l3-1.5M16 13l3 1M10 17.5l-1.5 2.5M14 17.5l1.5 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <g id="hund-form">
       <ellipse cx="252" cy="150" rx="92" ry="56"/>
@@ -533,7 +516,7 @@ section[id], footer[id] { scroll-margin-top: 16px; }
 
   <section class="wrap hero" aria-labelledby="titel">
     <div>
-      <span class="status" data-status>Di–Fr 10–18 Uhr, Sa 10–14 Uhr</span>
+      <span class="status" data-status>Mo–Fr 10–18 Uhr, Sa 10–14 Uhr</span>
       <h1 id="titel">Fell in guten Händen</h1>
       <p class="hero-text">Waschen, Scheren, Trimmen und Entfilzen für jede Fellart — im Salon von Gabriela Erdmann an der Aachener Straße in Rheinbach. Ein Termin dauert je nach Rasse und Fell 60 bis 90 Minuten.</p>
       <div class="hero-cta">
@@ -541,7 +524,7 @@ section[id], footer[id] { scroll-margin-top: 16px; }
         <a class="btn btn-rand" href="https://www.openstreetmap.org/search?query=Aachener%20Stra%C3%9Fe%2027%2C%2053359%20Rheinbach" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-ort"></use></svg>Route planen</a>
       </div>
       <dl class="hero-fakten">
-        <div><dt>Geöffnet</dt><dd>Di–Fr 10–18 Uhr, Sa 10–14 Uhr</dd></div>
+        <div><dt>Geöffnet</dt><dd>Mo–Fr 10–18 Uhr, Sa 10–14 Uhr</dd></div>
         <div><dt>Salon</dt><dd>Aachener Str. 27, Rheinbach</dd></div>
       </dl>
     </div>
@@ -608,25 +591,17 @@ section[id], footer[id] { scroll-margin-top: 16px; }
 
   <section class="wrap block" id="leistungen" aria-labelledby="leistungen-titel">
     <h2 class="h2" id="leistungen-titel">Jede Fellart braucht etwas anderes</h2>
-    <p class="lead">Ein Rauhaardackel wird getrimmt, ein Doodle geschoren, ein Labrador entwollt. Wählen Sie das Fell Ihres Hundes — dann sehen Sie, was im Salon gemacht wird.</p>
-    <div class="fell-filter" role="group" aria-label="Fellart wählen">
-      <button class="chip" type="button" data-fell="alle" aria-pressed="true">Alle Leistungen</button>
-      <button class="chip" type="button" data-fell="kurz" aria-pressed="false">Kurzhaar</button>
-      <button class="chip" type="button" data-fell="lang" aria-pressed="false">Langhaar</button>
-      <button class="chip" type="button" data-fell="rauh" aria-pressed="false">Rauhaar</button>
-      <button class="chip" type="button" data-fell="pudel" aria-pressed="false">Pudel &amp; Doodle</button>
-    </div>
-    <ul class="leistungen" aria-live="polite">
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-wasser"></use></svg><div><h3>Waschen &amp; Föhnen</h3><p>Gründlich gewaschen, danach trocken geföhnt und durchgebürstet.</p></div></li>
-      <li data-fell="lang pudel"><svg class="i" aria-hidden="true"><use href="#l-schere"></use></svg><div><h3>Scheren &amp; Schneiden</h3><p>Von der kurzen Sommerschur bis zum Schnitt nach Rassestandard.</p></div></li>
-      <li data-fell="rauh"><svg class="i" aria-hidden="true"><use href="#l-trimmen"></use></svg><div><h3>Trimmen</h3><p>Bei Rauhaar wird das abgestorbene Deckhaar gezupft statt geschnitten. So bleibt die Struktur erhalten.</p></div></li>
-      <li data-fell="lang pudel rauh"><svg class="i" aria-hidden="true"><use href="#l-filz"></use></svg><div><h3>Entfilzen</h3><p>Verfilzte Stellen werden gelöst, so weit es für den Hund angenehm bleibt.</p></div></li>
-      <li data-fell="kurz lang"><svg class="i" aria-hidden="true"><use href="#l-wolle"></use></svg><div><h3>Unterwolle entfernen</h3><p>Die dichte Unterwolle wird ausgekämmt, damit das Fell wieder atmen kann.</p></div></li>
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-kralle"></use></svg><div><h3>Krallen schneiden</h3><p>Die Krallen werden auf die richtige Länge gekürzt.</p></div></li>
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-ohr"></use></svg><div><h3>Ohrenpflege</h3><p>Die Ohren werden gereinigt und kontrolliert.</p></div></li>
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-pfote"></use></svg><div><h3>Pfoten- &amp; Ballenpflege</h3><p>Das Haar zwischen den Ballen wird gekürzt, die Pfoten werden gepflegt.</p></div></li>
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-zahn"></use></svg><div><h3>Zahnpflege</h3><p>Die Zähne werden kontrolliert und gereinigt.</p></div></li>
-      <li data-fell="kurz lang rauh pudel"><svg class="i" aria-hidden="true"><use href="#l-zecke"></use></svg><div><h3>Zeckenentfernung</h3><p>Zecken werden vollständig entfernt.</p></div></li>
+    <p class="lead">Ein Rauhaardackel wird getrimmt, ein Doodle geschoren, ein Labrador entwollt. Diese Leistungen gibt es im Salon:</p>
+    <ul class="leistungen">
+      <li><svg class="i" aria-hidden="true"><use href="#l-wasser"></use></svg><div><h3>Waschen &amp; Föhnen</h3><p>Gründlich gewaschen, danach trocken geföhnt und durchgebürstet.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-schere"></use></svg><div><h3>Scheren &amp; Schneiden</h3><p>Von der kurzen Sommerschur bis zum Schnitt nach Rassestandard.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-trimmen"></use></svg><div><h3>Trimmen</h3><p>Bei Rauhaar wird das abgestorbene Deckhaar gezupft statt geschnitten. So bleibt die Struktur erhalten.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-filz"></use></svg><div><h3>Entfilzen</h3><p>Verfilzte Stellen werden gelöst, so weit es für den Hund angenehm bleibt.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-wolle"></use></svg><div><h3>Unterwolle entfernen</h3><p>Die dichte Unterwolle wird ausgekämmt, damit das Fell wieder atmen kann.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-kralle"></use></svg><div><h3>Krallen schneiden</h3><p>Die Krallen werden auf die richtige Länge gekürzt.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-ohr"></use></svg><div><h3>Ohrenpflege</h3><p>Die Ohren werden gereinigt und kontrolliert.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-pfote"></use></svg><div><h3>Pfoten- &amp; Ballenpflege</h3><p>Das Haar zwischen den Ballen wird gekürzt, die Pfoten werden gepflegt.</p></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#l-zecke"></use></svg><div><h3>Zeckenentfernung</h3><p>Zecken werden vollständig entfernt.</p></div></li>
     </ul>
   </section>
 
@@ -635,20 +610,17 @@ section[id], footer[id] { scroll-margin-top: 16px; }
       <h2 class="h2">Was es kostet</h2>
       <p class="lead">Der Preis hängt von Größe, Rasse und Fellzustand ab. Deshalb gibt es keine Pauschale, sondern ein Angebot für Ihren Hund.</p>
       <dl class="preisliste">
-        <div><dt>Krallen schneiden</dt><dd>ab 5 €</dd></div>
-        <div><dt>Komplettpflege, kleiner Hund</dt><dd><span class="ph">auf Anfrage</span></dd></div>
-        <div><dt>Komplettpflege, mittlerer Hund</dt><dd><span class="ph">auf Anfrage</span></dd></div>
-        <div><dt>Komplettpflege, großer Hund</dt><dd><span class="ph">auf Anfrage</span></dd></div>
-        <div><dt>Entfilzen</dt><dd><span class="ph">auf Anfrage</span></dd></div>
+        <div><dt>Krallen schneiden</dt><dd>ab 10 €</dd></div>
+        <div><dt>Alle anderen Leistungen</dt><dd>auf Anfrage</dd></div>
       </dl>
       <p class="hinweis">Im Salon gibt es außerdem eine große Auswahl an Hundezubehör.</p>
     </div>
 
     <div class="tel-karte dunkel">
       <div class="tel-haupt">
-        <span class="status status-dunkel" data-status>Di–Fr 10–18 Uhr, Sa 10–14 Uhr</span>
+        <span class="status status-dunkel" data-status>Mo–Fr 10–18 Uhr, Sa 10–14 Uhr</span>
         <h2>Termin am Telefon vereinbaren</h2>
-        <p class="unter">Rufen Sie zu den Öffnungszeiten an: <span class="nowrap">Di–Fr 10–18 Uhr,</span> <span class="nowrap">Sa 10–14 Uhr.</span></p>
+        <p class="unter">Rufen Sie zu den Öffnungszeiten an: <span class="nowrap">Mo–Fr 10–18 Uhr,</span> <span class="nowrap">Sa 10–14 Uhr.</span></p>
         <a class="tel-gross" href="tel:+4922261681633" aria-label="Anrufen: 02226 1681633">
           <span class="rund"><svg class="i" aria-hidden="true"><use href="#i-tel"></use></svg></span>
           <span class="nummer">02226 1681633</span>
@@ -684,11 +656,10 @@ section[id], footer[id] { scroll-margin-top: 16px; }
         <h2 class="h2" id="social-titel">Der Salon auf TikTok und Instagram</h2>
         <p class="lead">Kurze Clips vom Scheren, frisch frisierte Hunde und Einblicke in den Salon.</p>
         <div class="social-knoepfe">
-          <a class="btn btn-tinte" href="https://www.tiktok.com/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-tiktok"></use></svg>TikTok</a>
-          <a class="btn btn-tinte" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-insta"></use></svg>Instagram</a>
-          <a class="btn btn-rand" href="https://www.facebook.com/p/Hundeschererei-Rheinbach-100054594784123/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-fb"></use></svg>Facebook</a>
+          <a class="btn btn-tinte" href="https://www.tiktok.com/@hundescherereirheinbach" target="_blank" rel="noopener" aria-label="TikTok: @hundescherereirheinbach"><svg class="i" aria-hidden="true"><use href="#i-tiktok"></use></svg>TikTok</a>
+          <a class="btn btn-tinte" href="https://www.instagram.com/hundeschererei_rheinbach/" target="_blank" rel="noopener" aria-label="Instagram: @hundeschererei_rheinbach"><svg class="i" aria-hidden="true"><use href="#i-insta"></use></svg>Instagram</a>
         </div>
-        <p class="hinweis"><span class="ph">Platzhalter — TikTok- und Instagram-Profil sowie die Clips sind noch einzutragen. Facebook ist bereits verlinkt.</span></p>
+        <p class="hinweis"><span class="ph">Platzhalter — die vier Kacheln werden durch echte Clips aus den Profilen ersetzt.</span></p>
       </div>
       <div class="kacheln" aria-label="Clips (Platzhalter)">
         <div class="kachel"><svg class="plattform" aria-hidden="true"><use href="#i-tiktok"></use></svg><div class="abspielen" aria-hidden="true"><svg class="i"><use href="#i-play"></use></svg></div><span>Doodle vorher und nachher</span></div>
@@ -717,7 +688,7 @@ section[id], footer[id] { scroll-margin-top: 16px; }
       <div>
         <h3>Öffnungszeiten</h3>
         <dl class="zeiten">
-          <div data-tag="1"><dt>Montag</dt><dd>Geschlossen</dd></div>
+          <div data-tag="1"><dt>Montag</dt><dd>10:00 – 18:00</dd></div>
           <div data-tag="2"><dt>Dienstag</dt><dd>10:00 – 18:00</dd></div>
           <div data-tag="3"><dt>Mittwoch</dt><dd>10:00 – 18:00</dd></div>
           <div data-tag="4"><dt>Donnerstag</dt><dd>10:00 – 18:00</dd></div>
@@ -764,7 +735,7 @@ section[id], footer[id] { scroll-margin-top: 16px; }
   wischen();
 
   // Öffnungsstatus
-  var plan = { 0: null, 1: null, 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [10, 14] };
+  var plan = { 0: null, 1: [10, 18], 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [10, 14] };
   var namen = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
   var jetzt = new Date();
   var tag = jetzt.getDay();
@@ -787,19 +758,6 @@ section[id], footer[id] { scroll-margin-top: 16px; }
   });
   var zeile = document.querySelector('.zeiten [data-tag="' + tag + '"]');
   if (zeile) zeile.classList.add('heute');
-
-  // Fellart-Filter
-  var chips = document.querySelectorAll('.fell-filter .chip');
-  var punkte = document.querySelectorAll('.leistungen li');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var fell = chip.getAttribute('data-fell');
-      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
-      punkte.forEach(function (li) {
-        li.hidden = fell !== 'alle' && li.getAttribute('data-fell').split(' ').indexOf(fell) < 0;
-      });
-    });
-  });
 
   // Mobiles Menü
   var knopf = document.querySelector('.menu-knopf');
